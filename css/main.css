@@ -1,0 +1,6 @@
+﻿#North{height:55px;background:#BFCAE6;}
+#West{width:200px;background:#FFF;}
+#South{height:30px;background:#BFCAE6;}
+#LeftAccordion a{display:block;}
+#Center .panel-body{overflow-y:hidden;}
+.messager-button a,.messager-button span{outline:none!important;}

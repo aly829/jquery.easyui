@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/yotime-ui.js"></script>
+	<script type="text/javascript" src="js/yotime-main.js"></script>
+</head>
+<body class="easyui-layout">
+	<!--头部开始-->
+	<div data-options="region:'north',border:false" id="North">
+		<a href="javascript:void(0);" id="closeHead">折叠头部</a>
+		<a href="javascript:void(0);" onClick="changeIconTabs('弹窗功能','icon-ok');">更换选项卡的图标</a>
+	</div>
+	<!--头部结束-->
+	<!--左侧导航菜单开始-->
+	<div data-options="region:'west',split:true,title:'West'" id="West">
+		<div id="LeftAccordion" class="easyui-accordion"></div>
+	</div>
+	<!--左侧导航菜单结束-->
+	<!--底部开始-->
+	<div data-options="region:'south',border:false" id="South">底部</div>
+	<!--底部结束-->
+	<!--主体内容区域开始-->
+	<div data-options="region:'center'" id="Center" style="overflow:hidden;">
+		<div id="MainTabs" class="easyui-tabs">
+			<div title="欢迎使用" data-options="closable:true">欢迎使用后台管理系统</div>
+		</div>
+	</div>
+	<!--主体内容区域结束-->
+	<!--右键菜单开始-->
+	<div id="centerMenu" class="easyui-menu">
+		<div id="menu_ThisRefresh">刷新</div>
+		<div class="menu-sep"></div>
+		<div id="menu_ThisClose">关闭此页面</div>
+		<div id="menu_OtherClose">关闭其它页面</div>
+		<div id="menu_AllClose">关闭所有页面</div>
+	</div>
+	<!--右键菜单结束-->
+</body>
+</html>

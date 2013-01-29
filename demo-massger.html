@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li><a href="javascript:void(0);" onClick="alertMsg();">alert</a></li>
+		<li><a href="javascript:void(0);" onClick="confirmMsg();">confirm</a></li>
+		<li><a href="javascript:void(0);" onClick="showMsg();">show</a></li>
+		<li><a href="javascript:void(0);" onClick="promptMsg();">prompt</a></li>
+	</ul>
+	<script>
+	function alertMsg(){
+		$.messager.alert("提示","这是一个消息弹出框");
+	}
+	
+	function confirmMsg(){
+		$.messager.confirm("确认","是否删除该记录？",function(y){
+			if(y)
+			{$.messager.alert("提示","yes");}
+			else
+			{$.messager.alert("提示","no");}
+		});
+	}
+	
+	function showMsg(){
+		$.messager.show({
+			title:"你有一条信息需要处理",
+			msg:'aaaaaaaaaaa',
+			timeout:2000,
+			showType:'fade'
+		});
+	}
+	
+	function promptMsg(){
+		$.messager.prompt("prompt","请输入一个字符:",function(e){
+			if(e)
+			{alert("你输入的是："+e);}
+		});
+	}
+	</script>
+</body>
+</html>

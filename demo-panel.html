@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body>
+<a href="javascript:void(0);" onClick="showPanel()">显示面板</a>
+<div id="c1" style="display:none;width:400px;">
+	<a href="javascript:void(0);" onClick="add()">add</a>
+	<p>面板一面板一面板一面</p>
+	<p>面板二</p>
+</div>
+<script>
+function showPanel(){
+	$("#c1").fadeIn(300).window({
+		title:"我的面板",
+		collapsible:false,
+		minimizable:false,
+		maximizable:false,
+		resizable:false,
+		modal:true
+	});
+}
+
+function add(){
+	$("#c1").append("<p>aaaa</p>");
+}
+</script>
+</body>
+</html>
